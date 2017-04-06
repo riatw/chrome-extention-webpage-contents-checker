@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script language="javascript/template" data-tmpl>
+		<li data-list-item>
+			<p class="option-bar">サイト</p>
+
+			<p class="option-title">全般設定</p>
+			<dl class="option-detail">
+				<dt>サイト名</dt>
+				<dd><input type="text" data-name="global_sitename"></dd>
+			</dl>
+
+			<p class="option-title">テスト1 以下のURL（NG URL）が含まれていないか</p>
+			<dl>
+				<dt>NG URL</dt>
+				<dd><input type="text" data-name="test1_ngurl"></dd>
+			</dl>
+
+			<p class="option-title">テスト2 以下の文字（NG文字）が含まれていないか</p>
+			<dl>
+				<dt>NG文字（"|"区切りで入力）</dt>
+				<dd><textarea data-name="test2_ngchar"></textarea></dd>
+			</dl>
+			<dl>
+				<dt>セーフ文字（"|"区切りで入力）</dt>
+				<dd><textarea data-name="test2_safechar"></textarea></dd>
+			</dl>
+
+			<div class="option-remove"><button data-item-remove>削除</button></div>
+		</li>
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>設定</h1>
+		<p>
+			サイトごとの設定の追加が行えます。<br>
+			下部の「追加ボタン」から追加を行い、最後に「保存」をクリックします。<br>
+			※インポートではすべての設定が上書きされます
+		</p>
+
+		<div class="m-list-btngroup">
+			<li>
+				<button data-add>追加</button>
+			</li>
+			<li>
+				<button data-save>保存</button>
+			</li>
+			<li>
+				<button data-import>インポート</button>
+			</li>
+			<li>
+				<button data-export>エクスポート</button>
+			</li>
+		</div>
+
+		<div class="m-box-export" data-export-box>
+			<textarea data-export-raw></textarea>
+		</div>
+
+		<ul class="m-list-options" data-list>
+
+		</ul>
+
+		<div class="m-list-btngroup">
+			<li>
+				<button data-add>追加</button>
+			</li>
+			<li>
+				<button data-save>保存</button>
+			</li>
+		</div>
+	</div>
+
+	<script src="js/mustache.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/options.js"></script>
+</body>
+</html>

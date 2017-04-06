@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div id="wrap">
+		<div class="m-box-profile">
+			<dl>
+				<dt>チェック対象サイト</dt>
+				<dd>
+					<select name="profile" id="profile" data-setting data-autosave></select>
+				</dd>
+				<dd><button id="docheck" class="profile-docheck">実行</a></dd>
+				<dd><a href="/options.html" target="_blank" class="profile-add">設定</a></dd>
+			</dl>
+
+			<input type="hidden" id="test1_ngurl">
+			<input type="hidden" id="test2_ngchar">
+			<input type="hidden" id="test2_safechar">
+		</div>
+
+		<ul class="m-list-form">
+			<li>
+				<textarea id="buff" rows="10"></textarea>
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
